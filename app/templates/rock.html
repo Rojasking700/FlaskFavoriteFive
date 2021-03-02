@@ -2,4 +2,28 @@
 
 {% block content %}
     <h1>Rock</h1>
+    <h4>These are my favorite rock bands:</h4>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.ticketweb.com/i/00/09/69/88/39_Edp.jpg?v=12" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ Motionless_in_White.artist }}</h5>
+              <p>These are my favorite songs</p>
+              <ul>
+                  {% for item in Motionless_in_White.songs %}
+                    <li>{{ item }}</li>  
+                  {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+          
+      </div>
 {% endblock content %}
