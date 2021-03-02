@@ -2,4 +2,21 @@
 
 {% block content %}
     <h1>Country</h1>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://rocknloadmag.com/wp-content/uploads/2020/08/MW_7summers_cover1-scaled.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ Morgan_Wallen.artist }}</h5>
+              <p>These are my favorite songs</p>
+              <ul>
+                  {% for item in Morgan_Wallen.songs %}
+                    <li>{{ item }}</li>  
+                  {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 {% endblock content %}
